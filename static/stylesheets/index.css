@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sundanese&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(47, 47, 47);
+}
+
+.navbar{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    align-items: center;
+}
+
+.navlinks{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    list-style: none;
+}
+
+.navlinks li{
+    margin: 10px 20px;
+}
+
+.logo{
+    margin: 10px 20px;
+    font-size: 2em;
+    font-weight: 800;
+    color: red;
+    font-family: 'Noto Sans Sundanese', sans-serif;
+}
+
+.chatbot{
+    display: flex;
+    flex-direction: column;
+    background-color: #2ecc71;
+    width: 50%;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.chatbot .chatbot-title{
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+.chatbot .chatbot-desc{
+    font-style: italic;
+}
+
+.chatbot .chatbot-form{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffffa0;
+    text-align: center;
+}
+
+.chatbot .chatbot-form form input{
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.chatbot .chatbot-form form #submit-btn{
+    width: fit-content;
+    padding: 10px 20px;
+    margin-top: 20px;
+
+}
+
+.chatbot-result{
+    margin-top: 10px;
+    background-color: #000000a0;
+    border: none;
+    border-radius: 10px;
+}
+
+.chatbot-result-query{
+    background-color: #ffffffa0;
+    border-radius: 10px 10px 0 0;
+    padding: 5px;
+}
+.chatbot-result-query #query{
+    font-weight: bold;
+}
+
+.chatbot-result-response{
+    border-radius: 0 0 10px 10px;
+    padding: 5px;
+    color: white;
+}
+
+.page-footer{
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: antiquewhite;
+    justify-content: space-around;
+}
+
+.page-footer #love{
+    color: hotpink;
+}
+
+.page-footer #kural{
+    color: transparent;
+    background-image: linear-gradient(to left, #2ecc71, #3498db, #9b59b6, #f39c12);
+    -webkit-background-clip: text;
+    animation: rgbtext 2s linear infinite;
+    background-size: 500%;
+}
+
+@keyframes rgbtext {
+    0%{
+        background-position: 0% 100%;
+    }
+    50%{
+        background-position: 100% 0%;
+    }
+    100%{
+        background-position: 0% 100%;
+    }
+}

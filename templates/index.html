@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPEN AI API - Spectakural</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='/stylesheets/index.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">THE BOT</div>
+        <div><ul class="navlinks">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+        </ul></div>
+    </div>
+    <div class="chatbot">
+        <div class="chatbot-title">
+            <span>CHATBOT</span>
+        </div>
+        <div class="chatbot-desc">
+            <p>Welcome to the Chatbot. This chatbot is powered by ChatGPT3 API.</p><br>
+        </div>
+        <div class="chatbot-form">
+            <form action="" method="post">
+                <!-- <input type="text" name="query" id="query" placeholder="What's your query?">
+                <input type="submit" value=""> -->
+                {{ form.query(size = 30, placeholder="What's your query?") }}
+                {{ form.submit(id="submit-btn") }}
+            </form>
+        </div>
+        {% if response %}
+        <div class="chatbot-result">
+            <div class="chatbot-result-query">
+                <span>Your Query: <span id="query"> {{ query }}</span></span>
+            </div>
+            <div class="chatbot-result-response">
+                <span> {{ response }} </span>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <div class="page-footer">
+        <span>Made with <span id="love"><3</span> by <span id="kural"> Spectakural </span></span>
+    </div>
+</body>
+</html>
